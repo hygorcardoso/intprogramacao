@@ -2,10 +2,13 @@
 #include <string.h>
 
 int main() {
+
+    //Variaveis das cartas 1 e 2.
     char estado1[2] = " ", estado2[2] = " ", codigo1[3] = " ", codigo2[3] = " ", cidade1[50] = " ", cidade2[50] = " ";
     int populacao1 = 0, populacao2 = 0, pontoTuristico1 = 0, pontoTuristico2 = 0;
     float area1 = 0.0, area2 = 0.0, pib1 = 0.0, pib2 = 0.0;
 
+    //Inicio do cadastro da carta 1
     printf("Insira os dados da primeira carta \n\n");
 
     printf("Insira a sigla do estado: ");
@@ -31,6 +34,8 @@ int main() {
 
     printf("Insira o número de pontos turiscos: ");
     scanf("%i", &pontoTuristico1);
+
+    //Inicio do cadastro da carta 2
 
     printf("Insira os dados da segunda carta \n\n");
 
@@ -58,6 +63,8 @@ int main() {
     printf("Insira o número de pontos turiscos: ");
     scanf("%i", &pontoTuristico2);
 
+    //Inicio da impressão da carta 1
+
     printf("Dados da primeira cidade \n\n");
     printf("Estado: %s \n", estado1);
     printf("Código: %s \n", codigo1);
@@ -66,6 +73,8 @@ int main() {
     printf("Área: %.2f \n", area1);
     printf("PIB: %.2f \n", pib1);
     printf("Númeo de pontos Turísticos: %i", pontoTuristico1);
+
+    //Inicio da impressão da carta 2
 
     printf("Dados da segunda cidade \n\n");
     printf("Estado: %s \n", estado2);
@@ -76,6 +85,5 @@ int main() {
     printf("PIB: %.2f \n", pib2);
     printf("Númeo de pontos Turísticos: %i \n", pontoTuristico2);
     
-    //Comit enviado
     return 0;
 }
