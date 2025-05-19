@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/hygorcardoso/Library/CloudStorage/OneDrive-Pessoal/Documentos/Faculdade/01º Semestre/Introducao a programacao de computadores/SuperTrunfo",
+      "program": "/Users/hygorcardoso/Library/CloudStorage/OneDrive-Pessoal/Documentos/Faculdade/01º Semestre/Introducao a programacao de computadores/SuperTrunfo/build/Debug/outDebug"
+    }
+  ]
+}
