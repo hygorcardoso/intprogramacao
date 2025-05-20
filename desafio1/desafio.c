@@ -18,7 +18,6 @@ int main() {
     scanf("%s",codigo1);
 
     getchar();
-
     printf("Insira o nome da cidade: ");
     fgets(cidade1, sizeof(cidade1), stdin);
     cidade1[strcspn(cidade1, "\n")] = '\0';
@@ -46,7 +45,6 @@ int main() {
     scanf("%s", codigo2);
 
     getchar();
-
     printf("Insira o nome da cidade: ");
     fgets(cidade2, sizeof(cidade2), stdin);
     cidade2[strcspn(cidade2, "\n")] = '\0';
