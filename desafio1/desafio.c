@@ -41,9 +41,10 @@ int main() {
 
     printf("\n\nInsira a sigla do estado: ");
     scanf("%c", &estado2);
-    
+
+    getchar();
     printf("Insira o código da cidade: ");
-    scanf("%c", codigo2);
+    scanf("%s", codigo2);
 
     getchar();
     printf("Insira o nome da cidade: ");
