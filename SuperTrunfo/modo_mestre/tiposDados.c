@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <limits.h>
 
 int main() {
     /* 
@@ -10,11 +11,12 @@ int main() {
 
         Modificadores:
         unsigned: armazena apenas valores possitivos
-        signed:
-        long: 
-        short:
+        signed: armaze valos positivos e negativos
+        long: armazena valores muito grandes, com uma precisam muito grande
+        short: armazena valores muito pequenos.
     */
 
+    /*
     int numeroSinal = 3000000000;
     unsigned int numeroSemSinalSinal = 3000000000;
 
@@ -33,6 +35,22 @@ int main() {
     printf("Tamanho de long long int %zu bytes\n", sizeof(long long int));
     printf("Tamanho de double %zu bytes\n", sizeof(double));
     printf("Tamanho de long double %zu bytes\n", sizeof(long double));
-    //Short
+
+    unsigned long int numeroGrandePositivo = 4000000000;   
+    unsigned int numeroPositivo = 4000000000;
+    long int numeroGrande = 4000000000;
+    int numero = 4000000000;
+
+    printf("Número positivo grande: %lu \n ", numeroGrandePositivo);
+    printf("Número positivo : %u \n ", numeroPositivo);
+    printf("Número grande: %ld \n ", numeroGrande);
+    printf("Número: %d \n ", numero);
+     */
+    // Short
+    short int numeroPequeno = 32767; 
+    printf("Número pequeno (short int): %d \n", numeroPequeno);
+
+    numeroPequeno = 32768;
+    printf("Número pequeno atualizado (short int): % d\n", numeroPequeno);
 
 }
