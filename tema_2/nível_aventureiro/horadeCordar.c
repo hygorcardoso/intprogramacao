@@ -24,8 +24,7 @@ int main() {
     scanf("%i", &escolhaJogador);
 
     srand(time(0));
-    escolhaPc = 3;
-    // escolhaPc = rand() % 3 + 1;
+    escolhaPc = rand() % 3 + 1;
 
     printf("Escolha do PC: %i\n", escolhaPc);
 
@@ -71,7 +70,7 @@ int main() {
             if(escolhaPc == 2) {
                 printf("Papel embrulha Pedra. Você perdeu\n");
             } else if(escolhaPc == 3) {
-                printf("Pedra quebra Teosura. Você Ganhou\n");
+                printf("Pedra quebra Tesoura. Você Ganhou\n");
             }
         }
 
