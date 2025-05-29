@@ -24,7 +24,7 @@ int main() {
     scanf("%i", &escolhaJogador);
 
     srand(time(0));
-    escolhaPc = 2;
+    escolhaPc = 3;
     // escolhaPc = rand() % 3 + 1;
 
     printf("Escolha do PC: %i\n", escolhaPc);
@@ -50,18 +50,17 @@ int main() {
     
     }
 
-    switch (escolhaPc)
-    {
+    switch (escolhaPc) {
         case 1:
             printf("Escolha do Computador: Pedra\n");
         break;
         
         case 2:
-            printf("Escolha do Jogador: Papel\n");
+            printf("Escolha do Computador: Papel\n");
         break;
         
         case 3:
-            printf("Escolha do Tesoura\n");
+            printf("Escolha do Computador: Tesoura\n");
         break;
     }
 
@@ -70,9 +69,25 @@ int main() {
     } else{
         if(escolhaJogador == 1) {
             if(escolhaPc == 2) {
-                printf("Papel embrulha Pedra. Você perdeu");
+                printf("Papel embrulha Pedra. Você perdeu\n");
             } else if(escolhaPc == 3) {
+                printf("Pedra quebra Teosura. Você Ganhou\n");
+            }
+        }
 
+        if(escolhaJogador == 2) {
+            if(escolhaPc == 1) {
+                printf("Papel embrulha Pedra. Você ganhou\n");
+            } else if(escolhaPc == 3) {
+                printf("Tesoura corta papel. Você perdeu\n");
+            }
+        }
+
+        if(escolhaJogador == 3) {
+            if(escolhaPc == 1) {
+                printf("Pedra quebra tesoura. Você perdeu\n");
+            } else if(escolhaPc == 2) {
+                printf("Tesoura corta papel. Você ganhou\n");
             }
         }
     }
