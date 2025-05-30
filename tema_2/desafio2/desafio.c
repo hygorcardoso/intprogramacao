@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <termios.h>
 
 int main() {
 
@@ -10,17 +11,25 @@ int main() {
     unsigned short int pontoTuristico1 = 50, pontoTuristico2 = 30;
     float area1 = 1200.25, area2 = 1200.25, pib1 = 699280000000.00, pib2 = 300500000000.00, pibCapita1 = 0, densidadePop1 = 0, pibCapita2 = 0, densidadePop2 = 0, superpoder1 = 0.00, superpoder2 = 0.00;
     int escolha = 0;
+    char *resultado = " ";
+
+    //inicia limpado o terminal.
+    system("clean");
+
+    //Inicia o menu principal do jogo.
 
     printf("*** Bem vindo ao Supertrunfo de Cidade ***\n\n");
     printf("1. Cadastrar cartas\n");
     printf("2. Inspecionar cartas.\n");
-    printf("3. Comparar cartas.\n");
-    printf("4. Regras.\n");
+    printf("3. Comparar simples de cartas.\n");
+    printf("4. Comparar composta de cartas.\n");
+    printf("5. Regras.\n");
+    printf("6. Sair.\n");
     scanf("%i", &escolha);
 
     switch(escolha){
         case 1:
-            system("clear");
+            system("clean");
             //Inicio do cadastro da carta 1
 
             printf("Insira os dados da primeira carta \n\n");
@@ -89,11 +98,14 @@ int main() {
             densidadePop2 = (float)populacao2 / area2;
 
             superpoder2 = ((float)populacao2 + area2 + pib2 + (float)pontoTuristico2 + pibCapita2) + (1 / densidadePop2);
+            
+            system("clean");
+            main();
 
         break;
 
         case 2:
-            system("clear");
+            system("clean");
             //Inicio da impressão da carta 1
 
             printf("\n\n Dados da primeira cidade \n\n");
@@ -122,11 +134,15 @@ int main() {
             printf("PIB per Capita: R$%.2f \n", pibCapita2);
             printf("Super poder: %f \n", superpoder2);
 
+            system("read -n 1 -s");
+            system("clean");
+            main();
+
         break;
 
         case 3:
-            system("clear");
-            //Comparando os atributos das cartas.
+            system("clean");
+            //Comparando os atributos de forma simples das cartas.
 
             printf("\n\n Comparação de Cartas: \n\n");
             printf("Escolha qual atributo deve ser comparado: \n\n");
@@ -240,14 +256,34 @@ int main() {
                     printf("Resultado: Empate! \n");
                 }
             }
+
+            //Retorna para 
+            system("read -n 1 -s");
+            system("clean");
+            main();
             
         break;
 
         case 4:
+
+        break;
+
+        case 5:
+            //Apresenta regras do jogo.
             system("clear");
             printf("*** Regras ***\n\n");
             printf("1. Cada jogador deve cadastrar 1 carta, com os seguintes dados da cidade escolhida: \nCódigo da carta, estado, nome da cidade, população, área da cidade, PIB da cidade (valor inteiro), total de pontos turisticos.\n");
-            printf("2. Comparação: \nApós o cadastro é necessário escolher 1 atributo para ser comparado. Neste, não está incluso Código da carta, estado e nome. \nO jogo irá comparar o atributo escolhido de ambas as cartas, e informa qual carta tem o valor maior, e imprimi qual carta ganhou.\n");
+            printf("2. Comparação simples: \nApós o cadastro é necessário escolher 1 atributo para ser comparado. Neste, não está incluso Código da carta, estado e nome. \nO jogo irá comparar o atributo escolhido de ambas as cartas, e informa qual carta tem o valor maior, e imprimi qual carta ganhou.\n");
+            printf("3. Comparação composta: \nApós o cadastro é necessário escolher 2 atributos para ser comparado. Neste, não está incluso Código da carta, estado e nome. \nO jogo irá comparar o atributo escolhido de ambas as cartas, e informa qual carta tem o valor maior, e imprimi qual carta ganhou.\n");
+            // Da um pause no programa, e só retorna para a main, após usuário clicarl algum botão.
+            system("read -n 1 -s");
+
+            system("clear");
+            main();
+        break;
+
+        case 6:
+            printf("Até breve.\n");
         break;
 
         default:
