@@ -1,3 +1,4 @@
+#include <locale.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -44,12 +45,14 @@ void definiVencedor(char cidade1[50], char cidade2[50], float atributo1, float a
 }
 
 int main() {
+    setlocale(LC_ALL, "pt_BR");
 
     //Variaveis das cartas 1 e 2.
     char estado1[3] = "SP", estado2[3] = "RJ", codigo1[4] = "A01", codigo2[4] = "B02", cidade1[50] = "São Paulo", cidade2[50] = "Rio de Janeiro";
     unsigned long int populacao1 = 12325000, populacao2 = 6748000;
     unsigned short int pontoTuristico1 = 50, pontoTuristico2 = 30;
-    float area1 = 1521.11, area2 = 1200.25, pib1 = 699280000000.00, pib2 = 300500000000.00, pibCapita1 = 0, densidadePop1 = 0, pibCapita2 = 0, densidadePop2 = 0, superpoder1 = 0.00, superpoder2 = 0.00, totalAtributo1 = 0.00, totalAtributo2 = 0.00;
+    float area1 = 1521.11, area2 = 1200.25, pib1 = 699280000000.00, pib2 = 300500000000.00, pibCapita1 = 0, densidadePop1 = 0, pibCapita2 = 0, densidadePop2 = 0, superpoder1 = 0.00, superpoder2 = 0.00;
+    double totalAtributo1 = 0.00, totalAtributo2 = 0.00;
     int escolha = 0, atributo1 = 0, atributo2 = 0;
     char *resultado = " ";
 
