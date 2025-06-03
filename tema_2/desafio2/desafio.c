@@ -446,18 +446,20 @@ int main() {
                 }
 
                 printf("\n=== Comparando soma de atributos \n\n");
-                printf("Carta 1 - %s (%s): %f.\n", cidade1, estado1, totalAtributo1);
-                printf("Carta 2 - %s (%s): %f.\n", cidade2, estado2, totalAtributo2);
+                printf("Carta 1 - %s (%s): %.2f.\n", cidade1, estado1, totalAtributo1);
+                printf("Carta 2 - %s (%s): %.2f.\n", cidade2, estado2, totalAtributo2);
+
+                definiVencedor(cidade1, cidade2, totalAtributo1, totalAtributo2);
+
+                pausa();
+                limpaTela();
+                main();
             } else {
                 limpaTela();
                 printf("Selecionado 2 vezes o mesmo valor. Refaça a operação.\n");
                 pausa();
                 limpaTela();
             }
-
-            pausa();
-            limpaTela();
-            main();
 
         break;
 
